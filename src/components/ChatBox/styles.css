@@ -1,0 +1,32 @@
+.chatBoxUser {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2px;
+}
+.email {
+}
+.date {
+}
+.chatBox {
+  position: relative;
+  display: inline-flex;
+  max-width: 100%;
+  padding: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+}
+.tri {
+  position: absolute;
+  top: -3.4px;
+  /* left: -9px; */
+  /* right: -9px; */
+  transform: scale(2, 1);
+}
+.msg {
+  max-width: 402px;
+  white-space: normal;
+  word-wrap: break-word;
+}

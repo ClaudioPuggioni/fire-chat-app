@@ -1,0 +1,75 @@
+#roomsWin {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+#roomsWinHeader {
+  position: absolute;
+  top: -44px;
+  font-size: 30px;
+}
+/* #roomsWinHotel {
+  position: relative;
+  min-height: 417px;
+  max-height: 600px;
+  min-width: auto;
+  margin-top: 159px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+
+  border-radius: 5px;
+  background-color: white;
+} */
+#roomsWinHotel {
+  position: relative;
+  /* min-height: 417px; */
+  /* max-height: 600px; */
+  /* min-width: auto; */
+  margin-top: 159px;
+  padding: 20px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* gap: 10px; */
+  /* flex-shrink: 0; */
+  border-radius: 5px;
+  background-color: white;
+}
+#roomsWinHotelHall {
+  display: flex;
+  flex-direction: column;
+  min-width: auto;
+  min-height: 333px;
+  max-height: 517px;
+  margin-bottom: 40px;
+  background-color: pink;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+#roomsWinInputBox {
+  position: absolute;
+  bottom: 17px;
+  width: 100%;
+  padding: 0px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+#roomsWinInput {
+  width: 100%;
+  padding-left: 10px;
+}
+#roomsWinAddBtn {
+}

@@ -1,0 +1,75 @@
+#chatWin {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#chatWinContainer {
+  position: relative;
+  height: 610px;
+  width: 500px;
+  margin-top: 155px;
+
+  background-color: white;
+}
+
+#chatBox {
+  height: 570px;
+  width: 500px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  gap: 12px;
+
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+
+#chatWinHeader {
+  position: absolute;
+  top: -50px;
+
+  display: flex;
+  justify-content: flex-start;
+  gap: 120px;
+
+  font-size: 30px;
+}
+#returnArrowBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(45, 77, 164);
+  background: linear-gradient(135deg, rgba(65, 65, 65, 1) 1%, rgba(147, 147, 147, 1) 7%, rgba(222, 222, 222, 1) 11%, rgba(255, 255, 255, 1) 18%, rgba(224, 232, 239, 1) 24%, rgba(147, 147, 147, 1) 28%, rgba(65, 65, 65, 1) 34%, rgba(124, 124, 124, 1) 49%, rgba(252, 252, 252, 1) 96%);
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.437);
+  /* background: linear-gradient(0deg, rgba(65, 65, 65, 1) 1%, rgba(147, 147, 147, 1) 7%, rgba(222, 222, 222, 1) 9%, rgba(252, 252, 252, 1) 17%, rgba(224, 232, 239, 1) 26%, rgba(147, 147, 147, 1) 28%, rgba(65, 65, 65, 1) 34%, rgba(124, 124, 124, 1) 48%, rgba(252, 252, 252, 1) 96%); */
+}
+#returnArrowIcon {
+  height: 30px;
+  width: 30px;
+  transform: rotateY(180deg);
+  filter: invert(100%);
+}
+
+#inpuDiv {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+}
+#inputBox {
+  width: 100%;
+  padding-left: 10px;
+}
+#inputSend {
+  padding: 10px 20px;
+}

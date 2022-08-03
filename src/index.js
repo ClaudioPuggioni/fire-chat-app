@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import "./index.css";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
+import UserInterface from "./components/UserInterface";
+import LoginWin from "./components/LoginWin/LoginWin";
+import RoomsWin from "./components/RoomsWin/RoomsWin";
+import ChatWin from "./components/ChatWin/ChatWin";
+import Page404 from "./components/Page404/Page404";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Provider store={store}>
+    <Router>
+      <Routes>
+        <Route path="/" element={<UserInterface />}>
+          <Route index element={<LoginWin />} />
+          <Route path="rooms" element={<RoomsWin />} />
+          <Route path="chat" element={<ChatWin />} />
+        </Route>
+        <Route path="*" element={<Page404 />} />
+      </Routes>
+    </Router>
+  </Provider>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

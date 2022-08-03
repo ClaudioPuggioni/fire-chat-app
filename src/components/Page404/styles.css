@@ -1,0 +1,27 @@
+#page404 {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+#page404Header {
+  font-size: 33px;
+  font-weight: 999;
+  text-shadow: 0.7px 0px 0px black;
+}
+#page404Body {
+  font-size: 17px;
+  margin-top: 10px;
+}
+#page404Divider {
+  height: 1.7px;
+  width: 100vw;
+  margin: 0px 2px;
+  margin-top: 8px;
+  background-color: rgb(161, 161, 156);
+}
+#page404Footer {
+  font-style: italic;
+  font-weight: 500;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}

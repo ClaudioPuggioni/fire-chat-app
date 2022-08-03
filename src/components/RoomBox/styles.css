@@ -1,0 +1,13 @@
+#roomBox {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 15px 29px;
+  border: 1px solid black;
+}
+#roomBoxName {
+  font-size: 28px;
+}
+#roomBoxAdmin {
+}
