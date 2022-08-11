@@ -16,9 +16,6 @@ function ChatWin() {
   const chatBoxRef = useRef(null);
 
   useEffect(() => {
-    console.log("ping! ran ChatWin useEffect~!");
-    console.log("ping! ran ChatWin useEffect~!");
-    console.log("ping! ran ChatWin useEffect~!");
     if (!status.currentUser) Navigate("/404");
     populateChat();
 
@@ -29,7 +26,9 @@ function ChatWin() {
   }, []);
 
   useEffect(() => {
-    bottomDiv.current.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      bottomDiv.current.scrollIntoView({ behavior: "smooth" });
+    }, 30);
     // eslint-disable-next-line
   }, [status.messages]);
 
@@ -66,17 +65,17 @@ function ChatWin() {
   return (
     <div id="chatWin">
       <div id="chatWinContainer">
+        <div id="chatWinHeader">
+          <button id="returnArrowBtn" onClick={() => dispatch(setChat(null)) && dispatch(setMsgs(false)) && Navigate("/rooms")}>
+            <img id="returnArrowIcon" src="/assets/return-arrow.svg" alt="return to rooms icon" />
+          </button>
+          {status.currChat.roomName}
+        </div>
         <div ref={chatBoxRef} id="chatBox">
-          <div id="chatWinHeader">
-            <button id="returnArrowBtn" onClick={() => dispatch(setChat(null)) && dispatch(setMsgs(false)) && Navigate("/rooms")}>
-              <img id="returnArrowIcon" src="/assets/return-arrow.svg" alt="return to rooms icon" />
-            </button>
-            {status.currChat.roomName}
-          </div>
           {status.messages ? status.messages.map((ele, idx) => <ChatBox msgInfo={ele} admin={status.currChat.roomAdmin} />) : null}
           <div ref={bottomDiv}></div>
         </div>
-        <div id="inpuDiv">
+        <div id="inputDiv">
           <input
             ref={inputMsg}
             id="inputBox"

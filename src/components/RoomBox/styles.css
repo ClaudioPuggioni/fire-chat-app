@@ -1,13 +1,42 @@
 #roomBox {
-  max-width: 300px;
+  position: relative;
+  width: 260px;
   display: flex;
   flex-direction: column;
   gap: 3px;
   padding: 15px 29px;
   border: 1px solid black;
+  margin: 2px 3px;
 }
 #roomBoxName {
   font-size: 28px;
 }
 #roomBoxAdmin {
+}
+.delRoom {
+  height: 17px;
+  width: 17px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: none;
+
+  cursor: pointer;
+  background-color: transparent;
+}
+.delBtnImg {
+  height: 100%;
+  width: 100%;
+  filter: invert(37%);
+  transition: filter 0.5s ease-out;
+  z-index: 100;
+}
+.delBtnImg:hover {
+  filter: invert(0%);
 }

@@ -1,6 +1,7 @@
 #navHeader {
-  position: absolute;
-  top: 0;
+  /* position: absolute;
+  top: 0; */
+  justify-self: flex-start;
   height: 100px;
   width: 100%;
   padding: 0px 30px;
@@ -30,6 +31,7 @@
   font-weight: 700;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 #loggedInDiv {
   display: flex;
