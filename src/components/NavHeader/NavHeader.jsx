@@ -18,7 +18,7 @@ function NavHeader(props) {
         </button>
       ) : (
         <div id="loggedInDiv">
-          <img id="avatarImg" src={status.currentUser.avatarSrc} alt="user avatar" />
+          {status.currentUser ? <img id="avatarImg" src={status.currentUser.avatarSrc} alt="user avatar" /> : null}
           <button
             id="navHeaderLogout"
             onClick={() => {
